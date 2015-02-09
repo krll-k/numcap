@@ -5,6 +5,8 @@ Phone numbers of all operators in Russian Federation
 
 Find region and phone operator by number
 
+Actual data: 9.02.2015
+
 
 
 Install
