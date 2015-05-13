@@ -1,6 +1,6 @@
 {
   "name": "numcap",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "Russian phone operators resource",
   "main": "index.js",
   "scripts": {
