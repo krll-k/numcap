@@ -14,12 +14,17 @@ function convertCsv2Json (filename) {
     fs.readFile(csvfilepath, 'utf8', function (err, data) {       
         if (err) throw err;
 
-        var lines = data.split('\r\n');
+        var lines = data.split('\n');
 
         var array = lines
             .map(function (line, i) {
                 return line.split(';');
             })
+	    .map(function (array, i) {
+		return array.map(function(el){
+		    return el.trim();
+		})
+	    })
             .map(function (array, i){
                 return getObject(array);
             });
