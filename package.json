@@ -23,7 +23,8 @@
     "url": "https://github.com/antirek/numcap/issues"
   },
   "dependencies": {
-    "phone-number-format": "0.0.3"
+    "phone-number-format": "0.0.3",
+    "substr": "0.0.7"
   },
   "devDependencies": {
     "grunt": "^0.4.5",

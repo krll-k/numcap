@@ -16,9 +16,14 @@ function reloadFiles () {
 
             var csvSecondLayer = csvHelper.parseCsv(data, splitter);
 
-            var listUrls = csvSecondLayer[8][3].trim('\r').split(' ');
-
-            var downloadAndConvert = function (filename) {
+        //    var listUrls = csvSecondLayer[8][3].trim('\r').split(' ');
+		
+		var listUrls = ['https://rossvyaz.ru/data/ABC-3xx.csv',
+                            'https://rossvyaz.ru/data/ABC-4xx.csv',
+                            'https://rossvyaz.ru/data/ABC-8xx.csv',
+                            'https://rossvyaz.ru/data/DEF-9xx.csv'];
+ 
+		var downloadAndConvert = function (filename) {
 
                 var fileAbsolutePath = downloadDirectory + path.basename(filename);
 
@@ -37,7 +42,8 @@ function reloadFiles () {
 }
 
 function getnumberCapacityListCsvLinks (callback) {
-    var odataBaseFileUrl = 'http://www.rossvyaz.ru/docs/articles/opendatalist.csv';
+	var odataBaseFileUrl = 'https://web.archive.org/web/20150317001456if_/http://www.rossvyaz.ru/docs/articles/opendatalist.csv';
+//    var odataBaseFileUrl = 'http://www.rossvyaz.ru/docs/articles/opendatalist.csv';
     var splitter = ';';
 
     readRemoteFile(odataBaseFileUrl, function (data) {
